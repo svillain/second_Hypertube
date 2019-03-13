@@ -1,0 +1,28 @@
+.vl {
+	width: 1px;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgb(139, 139, 139) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.credit_table {
+	width: 100%;
+	overflow-x: scroll;
+}
+.cell_name {
+	height: 45px;
+	padding-bottom: 10px;
+}
+.cell_image {
+	height: 90px;
+}
+.cell_role {
+	height: 60px;
+	font-size: smaller;
+}
+td:nth-child(even) {
+	background: #222222;
+}
+td:nth-child(odd) {
+	background: #282828;
+}
+td {
+	padding:0.25%;
+}
