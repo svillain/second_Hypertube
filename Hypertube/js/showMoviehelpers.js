@@ -22,7 +22,8 @@ async function getMovieDataPromise(result, pageType) {
 			result[i].imdbRating = Number(moviedata.imdbRating);									
 			result[i].Poster = moviedata.Poster;
 			result[i].genres = JSON.stringify(result[i].genres);
-			result[i].Title = moviedata.Title;				
+			result[i].Title = moviedata.Title;
+			result[i].Runtime = moviedata.Runtime;	
 			if (pageType == "info") {	
 				result[i].Plot = moviedata.Plot;
 				result[i].Production = moviedata.Production;
@@ -67,12 +68,15 @@ function createMovieCard(moviedata) {
 	else
 		imdbURL = "<a href='"+ moviedata.imdbURL +"'>Go to IMDb Page</a>";
 
+	//check if there is a runtime available
+	var runtime = moviedata.Runtime;
+
 	//check if there is a year provided
 	var yearRelease = moviedata.Year;
 	if (yearRelease === 'N/A' || yearRelease === 'undefined' || yearRelease === undefined || yearRelease === 'null' || yearRelease === null || isNaN(yearRelease) || yearRelease <= 0) 
 		yearRelease = 'N/A';
 
-	// check if there is a movie poster avalaible
+	// check if there is a movie poster available
 	var srcImage;
 	if (!(moviedata.poster_path === null))
 		srcImage = "https://image.tmdb.org/t/p/w342" + moviedata.poster_path;
@@ -116,6 +120,7 @@ function createMovieCard(moviedata) {
 							<img src="` + srcImage + `" style="width: 100%; height: 450px; spadding-top: 0.5rem;"/>
 							<br>
 							<p text-muted>Year Released: ` + yearRelease +`</p>
+							<p>Time: ` + runtime +`</p>
 						</div>
 						<div class="card-footer">
 							<p><i class="fas fa-star"></i> `+ rating +`</p>

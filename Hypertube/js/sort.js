@@ -25,10 +25,8 @@ function sortFunction(movieArray, sortType)
 function sortAscending(result, field) 
 {
 	let arr = [];
-	for(let i = 0; i < result.length; i++) 
-	{
-		for(let j = i; j < result.length; j++) 
-		{
+	for(let i = 0; i < result.length; i++) {
+		for(let j = i; j < result.length; j++) {
 			if (result[i][field] > result[j][field]) 
 				[result[i], result[j]] = [result[j], result[i]]; // simplified swap
 		}
@@ -41,14 +39,12 @@ function sortDescending(result, field)
 {
 	let arr = [];
 
-	for(let i = 0; i < result.length; i++) 
-	{
-		for(let j = i; j < result.length; j++) 
-		{
+	for(let i = 0; i < result.length; i++) {
+		for(let j = i; j < result.length; j++) {
 			if (result[i][field] < result[j][field]) 
 				[result[i], result[j]] = [result[j], result[i]]; // simplified swap
 		}
-			arr.push(result[i]);
+		arr.push(result[i]);
 	}
 	return arr;
 }
@@ -61,20 +57,15 @@ function sortGenre(result, genreID, type)
 	let arr2 = [];
 
 		// iterate through the movie arrays
-		for(let i = 0; i < result.length; i++) 
-		{
+		for(let i = 0; i < result.length; i++) {
 			// iterate through the genre array
-			for(let j = 0; j < result[i].genre_ids.length; j++) 
-			{
-				if (result[i].genre_ids[j] == genreID)
-				{
-					if (!(arr.includes(result[i]))) 
-					{
+			for(let j = 0; j < result[i].genre_ids.length; j++) {
+				if (result[i].genre_ids[j] == genreID) {
+					if (!(arr.includes(result[i]))) {
 						arr.push(result[i]);
 						console.log(arr);
 					}
 				}
-
 			}
 			if ((!(arr.includes(result[i]))) && (!(arr.includes(result[i]))))
 				arr2.push(result[i]);
@@ -90,10 +81,8 @@ function removeNoRating(result)
 {
 	let arr = [];
 
-	for(let i = 0; i < result.length; i++) 
-	{
-		if (!(result[i].imdbRating === 'N/A' || result[i].imdbRating === 'undefined' || result[i].imdbRating === undefined || result[i].imdbRating === 'null' && result[i].imdbRating === null || isNaN(result[i].imdbRating)))
-		{
+	for(let i = 0; i < result.length; i++) {
+		if (!(result[i].imdbRating === 'N/A' || result[i].imdbRating === 'undefined' || result[i].imdbRating === undefined || result[i].imdbRating === 'null' && result[i].imdbRating === null || isNaN(result[i].imdbRating))) {
 			arr.push(result[i]);
 		}
 	}
@@ -106,10 +95,8 @@ function appendNoRating(result, sort)
 	let arr = [];
 	let arr2 = [];
 
-	for(let i = 0; i < result.length; i++) 
-	{
-		if (!(result[i].imdbRating === 'N/A' || result[i].imdbRating === 'undefined' || result[i].imdbRating === undefined || result[i].imdbRating === 'null' && result[i].imdbRating === null || isNaN(result[i].imdbRating)))
-		{
+	for(let i = 0; i < result.length; i++) {
+		if (!(result[i].imdbRating === 'N/A' || result[i].imdbRating === 'undefined' || result[i].imdbRating === undefined || result[i].imdbRating === 'null' && result[i].imdbRating === null || isNaN(result[i].imdbRating))) {
 			arr.push(result[i]);
 		}
 		else 
@@ -129,14 +116,10 @@ function remove_Dup(arr)
 	var result = []; // this is what must be returned
 	var temp = []; // this array will store the ID and can compare against 
 
-	for (var i = 0; i < arr.length; i++) 
-	{
-		for (var j = 1; j < arr.length; j++) 
-		{	
-			if (arr[i].imdbID != arr[j].imdbID)
-			{
-				if (!(temp.includes(arr[i].imdbID)))
-				{
+	for (var i = 0; i < arr.length; i++) {
+		for (var j = 1; j < arr.length; j++) {	
+			if (arr[i].imdbID != arr[j].imdbID) {
+				if (!(temp.includes(arr[i].imdbID))) {
 					temp.push(arr[i].imdbID);
 					if (!(result.includes(arr[i])))
 						result.push(arr[i]);

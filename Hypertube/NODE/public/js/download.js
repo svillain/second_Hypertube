@@ -4,16 +4,13 @@ var ready = false;
 function downloadQuery(movie, status = true) {
 	var movieName = movie;//(movie != null && movie != 'undefined') ? document.getElementById('movie_name').value : movie;
 	var xhr = new XMLHttpRequest();
-
 	if (status == true) {
 		var address = "http://localhost:3000/startDownload/" + movieName;
 	}
 	else {
 		var address = "http://localhost:3000/checkStatus";
 	}
-
 	xhr.open('GET', address, true);
-
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4 && xhr.status == 200) {
 			if (xhr.responseText != 'failed' && xhr.responseText != 'Pending') {
@@ -33,31 +30,24 @@ function downloadQuery(movie, status = true) {
 			}
 		}
 	}
-
 	xhr.send();
 }
 
-function startStreamQuery(button)
-{
+function startStreamQuery(button) {
 	var movieName = button.value;
-
 	var divMain = document.getElementById('main_body');
 	var divSec = document.getElementById('movie_result');
-
 	var result = '<video id="videoPlayer" controls>';
 	result += '<source src="http://localhost:3001?movie='+ movieName +'" type="video/mp4">';
 	result += '</video>';
-
 	divMain.innerHTML = result;
 	divSec.innerHTML = '<button onclick="refreshPage()">Refresh</button>';
-	//window.location.href = "http://localhost:8080/Hypertube/video.php?torrent_id=" +val+"&movie="+movieName+"&title="+window.title;
+	alert("Movie ready, look down");
 }
 
-if (ready == true)
-{
+if (ready == true) {
 	var startStream_button = document.getElementById('startStream_button');
 	startStream_button.addEventListener('click', switchPage);
-
 }
 
 function refreshPage() {

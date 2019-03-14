@@ -2,7 +2,6 @@
     session_start();
     require_once('../setup.php');
 
-  
     if (isset($_GET['torrent_id']) && isset($_SESSION['id'])){
         try {
             $torrent_id = $_GET['torrent_id'];
@@ -19,7 +18,6 @@
                 $stmt->bindParam(':torrent_id', $torrent_id);
                 $stmt->bindParam(':comment_text', $comment_text);
                 echo 'exec <br>';
-
                 $stmt->execute();
             }
             echo 'before header <br>';

@@ -19,19 +19,7 @@ $picturep = $data['picture'];
 <html>
 	<title>Hypertube</title>
 	<head>
-		<link rel="apple-touch-icon" sizes="57x57" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/Hypertube/images/clap.png">
 		<link rel="icon" type="image/png" sizes="192x192"  href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/Hypertube/images/clap.png">
 		<link rel="manifest" href="/Hypertube/manifest.json">
 			
 		<meta name="msapplication-TileColor" content="#ffffff">
@@ -131,6 +119,9 @@ $picturep = $data['picture'];
 				else
 					imdbURL = "<a href='"+ result.imdbURL +"'>Go to IMDb Page</a>";
 
+				//check if there is a runtime available
+				var runtime = result.Runtime;
+
 				//check if there is a year provided
 				var yearRelease = result.Year;
 				if (yearRelease === 'N/A' || yearRelease === 'undefined' || yearRelease === undefined || yearRelease === 'null' || yearRelease === null || isNaN(yearRelease) || yearRelease <= 0) 
@@ -185,15 +176,15 @@ $picturep = $data['picture'];
 								</div>
 								<div class="col-sm-8 gallery-pad">
 									<p><b>Genre:</b> `+genres+`</p>
-									<br>
+									<p><b>Runtime:</b> `+runtime+`</p>
+									<br><br><br><br>
 									<p><b>Plot:</b> `+ result.Plot +`</p>
 									<br>
-									 <center>
+									<center>
 		<div class="col">
 		<div id="target" class="btn" style="color: white !important;">
 		</div>
-			<button class="btn" style="color: white !important;"><i class="fa fa-download"></i> Download</button> 
-			<button id='importantStream' class="btn" style="color: white !important;" onclick="downloadQuery('`+result.Title+` `+result.Year+`'); isWatched();"><i class="fa fa-tv"></i> Stream</button>
+			<button id='importantStream' class="btn" style="color: white !important;" onclick="downloadQuery('`+result.Title+` `+result.Year+`'); isWatched();"><i class="fa fa-tv"></i> Watch Movie</button>
 		</div>
 	</center>
 								</div>
