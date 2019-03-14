@@ -17,10 +17,10 @@
 	line-height: 25px;
 }
 .paginationjs .paginationjs-pages li.active>a {
-		background-color: #9933CC;
-		color: white
-		border: none;		
-		outline: none;
+	background-color: #9933CC;
+	color: white
+	border: none;		
+	outline: none;
 }
 .disabled {
 	color: #888888;

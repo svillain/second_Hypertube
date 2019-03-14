@@ -25,20 +25,7 @@ $username = $data['username'];
 <html lang="en">
 	<title>Hypertube</title>
 	<head>
-		<link rel="apple-touch-icon" sizes="57x57" href="/Hypertube/clap.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/Hypertube/clap.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/Hypertube/clap.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/Hypertube/clap.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/Hypertube/clap.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/Hypertube/clap.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/Hypertube/clap.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/Hypertube/clap.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/Hypertube/clap.png">
 		<link rel="icon" type="image/png" sizes="192x192" href="/Hypertube/clap.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/Hypertube/clap.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/Hypertube/clap.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/Hypertube/clap.png">
-		<link rel="manifest" href="/manifest.json">
 		
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/Hypertube/clap.png">
@@ -80,25 +67,24 @@ $username = $data['username'];
 			rel="stylesheet" 
 			integrity="sha384-e4EhcNyUDF/kj6ZoPkLnURgmd8KW1B4z9GHYKb7eTG3w3uN8di6EBsN2wrEYr8Gc" 
 			crossorigin="anonymous">
-</head>
-<body>
-	<div class="container-fluid">
-	  	<div class="row">
-			<div class="column">
-				<p style="color: white; align: center;">
-				<div>
-					<form action="user/commentinfo.php?torrent_id=<?php echo $torrent_id.'&title='.$movie_title; ?>" method=POST id="commentform" accept-charset="UTF-8">
-					<center>
-						<textarea rows="4" style="background-color: #333; color: white; width: 97.5vw; box-sizing: border-box; margin-left: auto; margin-right: auto;" name="comment_text" form="commentform" required placeholder="Hey, say something :D (max chars:255)"></textarea>
-						<button class="btn" style="width: 97.5vw; box-sizing: border-box;" type="submit" name="submit" required>comment</button>
-
-					</center>
-					</form>
+	</head>
+	<body>
+		<div class="container-fluid">
+	  		<div class="row">
+				<div class="column">
+					<p style="color: white; align: center;">
+					<div>
+						<form action="user/commentinfo.php?torrent_id=<?php echo $torrent_id.'&title='.$movie_title; ?>" method=POST id="commentform" accept-charset="UTF-8">
+						<center>
+							<textarea rows="4" style="background-color: #333; color: white; width: 97.5vw; box-sizing: border-box; margin-left: auto; margin-right: auto;" name="comment_text" form="commentform" required placeholder="Hey, say something :D (max chars:255)"></textarea>
+							<button class="btn" style="width: 97.5vw; box-sizing: border-box;" type="submit" name="submit" required>comment</button>
+						</center>
+						</form>
+					</div>
+					</p>
 				</div>
-				</p>
-			</div>
-	  	</div>  
-	  <br /> 
+	  		</div>  
+	  	</br> 
 			<p style="color: white; align: center">
 			  <?php
 			  

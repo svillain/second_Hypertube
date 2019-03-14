@@ -19,20 +19,7 @@ if (!isset($_SESSION['id'])) {
 <html>
 	<title>Hypertube</title>
 	<head>
-		<link rel="apple-touch-icon" sizes="57x57" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/Hypertube/images/clap.png">
 		<link rel="icon" type="image/png" sizes="192x192" href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/Hypertube/images/clap.png">
-		<link rel="manifest" href="/manifest.json">
 		
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/Hypertube/images/clap.png">
@@ -343,7 +330,7 @@ $(document).ready(function() {
 								$('#pagination-container').css("display", "block");
 
 							let result = [];
-							let totalPage = (response.total_pages * 40); // page size stores 20 items per page
+							let totalPage = (response.total_pages * 20); // page size stores 20 items per page
 
 							for (var i = 1; i < totalPage; i++) 
 							{
@@ -354,7 +341,7 @@ $(document).ready(function() {
 						}
 					});
 				},
-				pageSize: 40,
+				pageSize: 20,
 				ajax: 
 				{
 					beforeSend: function() 
@@ -443,7 +430,7 @@ $(document).ready(function() {
 								$('#pagination-container').css("display", "block");
 
 							let result = [];
-							let totalPage = (response.total_pages * 40); // page size stores 20 items per page
+							let totalPage = (response.total_pages * 20); // page size stores 20 items per page
 
 							for (var i = 1; i < totalPage; i++) 
 							{
@@ -454,7 +441,7 @@ $(document).ready(function() {
 						}
 					});
 				},
-				pageSize: 40,
+				pageSize: 20,
 				ajax: 
 				{
 					beforeSend: function() 

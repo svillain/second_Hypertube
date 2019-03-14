@@ -18,20 +18,7 @@ $pp = $data['picture'];
 <html>
 	<title>Hypertube</title>
 	<head>
-		<link rel="apple-touch-icon" sizes="57x57" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/Hypertube/images/clap.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/Hypertube/images/clap.png">
 		<link rel="icon" type="image/png" sizes="192x192"  href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/Hypertube/images/clap.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/Hypertube/images/clap.png">
-		<link rel="manifest" href="/Hypertube/manifest.json">
 		
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/Hypertube/images/clap.png">
@@ -54,22 +41,11 @@ $pp = $data['picture'];
 		</script>
 
 		<link 
-			rel="stylesheet" 
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
-			crossorigin="anonymous">
-		<link 
-			rel="stylesheet" 
-			href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
-			integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
-			crossorigin="anonymous">
-		<link 
 			href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/cyborg/bootstrap.min.css" 
 			rel="stylesheet" 
 			integrity="sha384-e4EhcNyUDF/kj6ZoPkLnURgmd8KW1B4z9GHYKb7eTG3w3uN8di6EBsN2wrEYr8Gc" 
 			crossorigin="anonymous">
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
-
 	</head>
 	<body>
 	<!-- Google Traduction -->
@@ -98,8 +74,8 @@ $pp = $data['picture'];
 <head>
 	<title>Settings</title>
 </head>
-<body class="container">
-
+<body>
+<center>
 <!-- Change Picture -->	
 	<h1 style="color: #3b7cd6;"> Change Profile Picture </h1>
 	<form action="modProfileImg.php" method="post" enctype="multipart/form-data">
@@ -160,7 +136,7 @@ $pp = $data['picture'];
 	</div>
  </form>
 <!-- Fin Change Email -->
-
+</center>
 </br>
 <?php endif; ?>
 	<script type="text/javascript">
