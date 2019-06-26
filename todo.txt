@@ -1,0 +1,8 @@
+- pagination infinie sur les resultats de film
+- probleme de download sur certains films ? TEST
+- quand on clique sur watch movie, recup info pour tenir au courant l'utilisateur 
+
+
+TEST :
+connexion avec tous les moyens de connexion
+
