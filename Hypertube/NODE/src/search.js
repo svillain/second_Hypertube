@@ -41,6 +41,10 @@ function startDownloadMulti(searchName, rootPath, callback) {
 									var hashUpper = hash[hash.length - 1].split('.')[0].toUpperCase();
 		
 									var torrentUrl = "http://itorrents.org/torrent/" + hashUpper + ".torrent";
+
+									console.log("---hashUpper----");
+									console.log(hashUpper);
+									
 									var movieName = results[i].title.toLowerCase();
 									var torrentPath = path.join(rootPath, 'torrents', movieName + '.torrent');
 

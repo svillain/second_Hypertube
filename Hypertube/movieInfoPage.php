@@ -20,7 +20,6 @@ $picturep = $data['picture'];
 	<title>Hypertube</title>
 	<head>
 		<link rel="icon" type="image/png" sizes="192x192"  href="/Hypertube/images/clap.png">
-		<link rel="manifest" href="/Hypertube/manifest.json">
 			
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/Hypertube/images/clap.png">
@@ -177,6 +176,7 @@ $picturep = $data['picture'];
 								<div class="col-sm-8 gallery-pad">
 									<p><b>Genre:</b> `+genres+`</p>
 									<p><b>Runtime:</b> `+runtime+`</p>
+									<p><b>Year Release:</b> `+yearRelease+`</p>
 									<br><br><br><br>
 									<p><b>Plot:</b> `+ result.Plot +`</p>
 									<br>
